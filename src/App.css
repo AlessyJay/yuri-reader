@@ -1,38 +1,311 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meow+Script&display=swap");
+
+body,
+html {
+  font-family: "Lato", sans-serif;
+  font-family: "Prompt", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: none;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+input {
+  width: 80%;
+  padding: 1%;
+  font-size: 24px;
+  outline: none;
+  border: black solid 3px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  font-family: "Prompt", sans-serif;
+  font-weight: bolder;
+}
+button {
+  font-family: "Lato", sans-serif;
+  font-family: "Prompt", sans-serif;
+  font-weight: bolder;
+}
+hr {
+  border: black solid 2px;
+  width: 80%;
+}
+
+/* Contents */
 .App {
+  height: 100vh;
+}
+.mainBackground {
+  position: absolute;
+  filter: brightness(35%);
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.yuri {
+  font-size: 98px;
+  font-family: "Meow Script";
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  color: white;
+}
+.nevigate {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-weight: bolder;
+  color: white;
+}
+.mainDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  color: white;
+  font-size: 42px;
+  height: 65vh;
+}
+
+/* About page */
+.background2 {
+  position: absolute;
+  z-index: -1;
+  filter: brightness(40%);
+  top: 0%;
+  height: 100vh;
+}
+.aboutDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  overflow: hidden;
+  color: white;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background2 img {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Works */
+.Work {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100vh;
+}
+.background3 {
+  position: absolute;
+  filter: brightness(40%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.background3 img {
+  height: 180vh;
+  width: 100%;
+}
+.Search {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  width: fit-content;
+}
+.SearchContent {
+  display: flex;
+  width: 200%;
+}
+.Search button {
+  border: rgb(0, 139, 0) solid 2px;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  height: 3rem;
+  width: 25%;
+  color: white;
+  font-size: 24px;
+  transition: 400ms;
+}
+.Search button:hover {
+  background: whitesmoke;
+  border: none;
+  color: black;
+}
+.workflows {
+  display: flex;
+  flex: auto;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Card */
+.Card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  width: 15%;
+  flex: auto;
+  background: #708090;
+  border-radius: 12px;
+  margin: 1%;
+  text-align: center;
+  transition: 400ms;
+  font-family: Noto Sans, sans-serif;
+  color: white;
+  max-width: 250px;
+  min-width: 250px;
+}
+.title {
+  max-height: 6rem;
+  min-height: 6rem;
+}
+.Card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.Card:hover {
+  transform: scale(1.005);
+  box-shadow: 5px 5px 15px black;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 165%;
+  left: 15%;
+  width: 70%;
+}
+.pagination h1 {
+  padding: "1%";
+  color: white;
+}
+.pagination #previous {
+  height: 2.8em;
+  width: 25%;
+  font-size: 24px;
+  background: transparent;
+  outline: none;
+  border: solid #a8ab1a 2px;
+  border-radius: 12px;
+  color: white;
+  transition: 200ms;
+}
+.pagination #next {
+  height: 2.8em;
+  width: 25%;
+  font-size: 24px;
+  background: transparent;
+  outline: none;
+  border: solid #099906 2px;
+  border-radius: 12px;
+  color: white;
+  transition: 200ms;
+}
+.pagination #previous:hover {
+  background: #a8ab1a;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.pagination #next:hover {
+  background: #099906;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.copyright {
+  position: absolute;
+  top: 173.5%;
+  left: 43%;
+}
+
+/* Register */
+.backgroundRegister {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  filter: brightness(35%);
+  height: 100vh;
+}
+.backgroundRegister img {
+  width: 100%;
+}
+.registerForm,
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+  font-weight: bolder;
+}
+.registerForm form,
+.loginForm form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 24px;
+  background: whitesmoke;
+  padding-bottom: 0.5%;
+  border-radius: 15px;
+  width: 25%;
+}
+.registerBtn {
+  margin-top: 5%;
+  width: 40%;
+  height: 2em;
+  font-size: 24px;
+  border: #009718 solid 2px;
+  background: transparent;
+  border-radius: 12px;
+  transition: 400ms;
+}
+.registerBtn:hover {
+  background: yellowgreen;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Main manga page */
+.MainMangaPage {
+  background: black;
+  height: 100vh;
 }
